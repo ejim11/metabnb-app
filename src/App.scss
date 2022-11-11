@@ -1,0 +1,28 @@
+@import "./scss/base";
+
+// general styling
+
+*::before,
+*::after,
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5rem; //1rem = 10px
+}
+
+body {
+  font-family: $font-primary;
+}
+
+img {
+  max-width: 100%;
+}
+
+input {
+  font-size: 16px !important;
+}
