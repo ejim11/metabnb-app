@@ -23,8 +23,8 @@ const links = [
 ];
 
 const Header = () => {
-  const navLinks = links.map((link) => (
-    <li>
+  const navLinks = links.map((link, i) => (
+    <li key={i}>
       <NavLink
         to={link.path}
         className={(navData) =>

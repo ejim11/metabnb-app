@@ -1,10 +1,10 @@
 @import "./scss/base";
 
-// general styling
+// general styling 
 
+*,
 *::before,
-*::after,
-* {
+*::after {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
@@ -12,7 +12,7 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5rem; //1rem = 10px
+  font-size: 62.5%; //1rem = 10px
 }
 
 body {
