@@ -1,0 +1,11 @@
+@import "../../scss/base";
+
+.imgs-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $color-primary;
+    height: 7rem;
+    margin-top: 3rem;
+}
