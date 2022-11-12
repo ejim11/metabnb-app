@@ -1,5 +1,11 @@
+import HomeComp from "../components/HomeComp/HomeComp";
+
 const Home = () => {
-  return;
+  return (
+    <>
+      <HomeComp />
+    </>
+  );
 };
 
 export default Home;
