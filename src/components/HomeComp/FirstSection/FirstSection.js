@@ -4,6 +4,7 @@ import image1 from "../../../assets/home-first-section/image 1.jpg";
 import image2 from "../../../assets/home-first-section/image 2.jpg";
 import image3 from "../../../assets/home-first-section/image 3.jpg";
 import image4 from "../../../assets/home-first-section/image 4.jpg";
+import classes from "./FirstSection.module.scss";
 
 const imgs = [
   [image1, image2],
@@ -22,8 +23,8 @@ const FirstSection = () => {
   ));
 
   return (
-    <Card>
-      <div>
+    <Card className={classes["first-section"]}>
+      <div className={classes["first-section-1"]}>
         <h1>
           Rent a <span>Place</span> away from <span>Home</span> in the
           <span>Metaverse</span>
@@ -35,10 +36,10 @@ const FirstSection = () => {
         </p>
         <div>
           <input placeholder="Search for location" type={"text"} />
-          <Button>Search</Button>
+          <Button className={classes["search-btn"]}>Search</Button>
         </div>
       </div>
-      <div>{images}</div>
+      <div className={classes["first-section-2"]}>{images}</div>
     </Card>
   );
 };
