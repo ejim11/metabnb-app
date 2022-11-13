@@ -1,6 +1,7 @@
 import classes from "./ImgItemBox.module.scss";
 import { FaHeart } from "react-icons/fa";
 import { useState } from "react";
+import FiveStar from "../FiveStar/FiveStar";
 
 const ImgItemBox = (props) => {
   const [filledHeart, setFilledHeart] = useState(false);
@@ -28,6 +29,7 @@ const ImgItemBox = (props) => {
         <p>{props.distance}</p>
         <p>{props.duration}</p>
       </div>
+      <FiveStar />
     </div>
   );
 };

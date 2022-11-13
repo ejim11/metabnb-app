@@ -4,8 +4,9 @@ import itemsData from "./itemsData";
 import classes from "./SecondSection.module.scss";
 
 const SecondSection = () => {
-  const itemsList = itemsData.map((item) => (
+  const itemsList = itemsData.map((item, i) => (
     <ImgItemBox
+      key={i}
       src={item.src}
       name={item.name}
       cost={item.cost}
