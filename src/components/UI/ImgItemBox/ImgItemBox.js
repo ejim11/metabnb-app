@@ -22,7 +22,7 @@ const ImgItemBox = (props) => {
       </div>
       <div className={classes["item-box-text"]}>
         <p>{props.name}</p>
-        <p>{props.cost}</p>
+        <p className={classes.cost}>{props.cost}</p>
       </div>
       <div className={classes["item-box-text"]}>
         <p>{props.distance}</p>

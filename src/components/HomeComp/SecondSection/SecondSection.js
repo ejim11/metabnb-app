@@ -15,9 +15,9 @@ const SecondSection = () => {
   ));
 
   return (
-    <Card>
+    <Card className={classes["second-section"]}>
       <h2>Inspiration for your next adventure</h2>
-      <div>{itemsList}</div>
+      <div className={classes["items-list-container"]}>{itemsList}</div>
     </Card>
   );
 };
