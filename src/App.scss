@@ -21,9 +21,14 @@ body {
 
 img {
   max-width: 100%;
-  position: relative;
 }
 
 input {
   font-size: 16px !important;
+}
+
+.App {
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
 }
