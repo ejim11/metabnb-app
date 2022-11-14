@@ -58,13 +58,28 @@
 
     &-2 {
         display: flex;
+        width: 40%;
 
         & .grp-img-1 {
             margin: 10rem .5rem 0 0;
         }
 
+        & .grp-img-1,
+        .grp-img-2 {
+            width: 50%;
+        }
+
         & .img-1 {
             margin-bottom: .5rem;
+        }
+
+        & .img-1,
+        .img-2 {
+            width: 100%;
+        }
+
+        & img {
+            width: 100%;
         }
     }
 }

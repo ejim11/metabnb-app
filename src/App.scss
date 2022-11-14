@@ -1,4 +1,5 @@
 @import "./scss/base";
+@import "./scss/mixin";
 
 // general styling 
 
@@ -12,7 +13,16 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; //1rem = 10px
+
+  font-size: 87.5%; //1rem = 14px}
+
+  @include respond(laptop) {
+    font-size: 75%; //1rem = 12px}
+  }
+
+  @include respond(laptop) {
+    font-size: 62.5%; //1rem = 10px}
+  }
 }
 
 body {
@@ -29,6 +39,11 @@ input {
 
 .App {
   position: relative;
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
+
+
+  @include respond(laptop) {
+    width: 100%;
+  }
 }
