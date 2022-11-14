@@ -56,3 +56,13 @@ header {
 .inactive-link {
     color: $color-text-black;
 }
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hide-modal {
+    opacity: 0;
+    visibility: hidden;
+}

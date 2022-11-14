@@ -67,7 +67,7 @@ const Header = () => {
       </header>
       <Modal
         onClick={hideModalHandler}
-        className={modalVisible ? classes["show"] : classes["hide"]}
+        className={modalVisible ? classes["show-modal"] : classes["hide-modal"]}
       >
         <WalletLinks onClose={hideModalHandler} />
       </Modal>
