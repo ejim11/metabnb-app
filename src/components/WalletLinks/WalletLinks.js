@@ -17,8 +17,8 @@ const WalletLinks = (props) => {
     <div
       key={i}
       className={`${classes["wallet-item"]} ${
-        activeClass === i ? classes["active"] : classes["inactive"]
-      }`}
+        classes[`wallet-item-${i + 1}`]
+      } ${activeClass === i ? classes["active"] : classes["inactive"]}`}
       onClick={() => {
         setActiveClass(i);
       }}
@@ -33,14 +33,14 @@ const WalletLinks = (props) => {
 
   return (
     <div className={classes.container}>
-      <div>
+      <div className={classes["bx-1"]}>
         <p>Connect Wallet</p>
         <AiOutlineClose
           className={classes["close-icon"]}
           onClick={props.onClose}
         />
       </div>
-      <div>
+      <div className={classes["bx-2"]}>
         <p>Choose your preferred wallet:</p>
         {walletList}
       </div>

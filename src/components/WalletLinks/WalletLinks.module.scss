@@ -1,0 +1,77 @@
+@import "../../scss/base";
+
+.container {
+    background-color: $color-white;
+    width: 60rem;
+    border-radius: 1rem;
+
+    & .bx-1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2.4rem 3.2rem;
+        border-bottom: 2px solid #f5f5f5;
+
+
+        & p {
+            font-size: 2.4rem;
+            font-weight: bold;
+        }
+
+        & .close-icon {
+            width: 2rem;
+            height: 2rem;
+            color: #333333;
+            cursor: pointer;
+        }
+    }
+
+    & .bx-2 {
+        padding: 3.2rem;
+
+        & p {
+            color: #333333;
+            font-size: 1.6rem;
+            font-weight: 400;
+            height: min-content;
+        }
+
+        & p:first-child {
+            margin-bottom: 1.6rem;
+        }
+
+
+
+        & .wallet-item {
+            display: flex;
+            align-items: center;
+            border: 1px solid #CFD8DC;
+            padding: 1.2rem 2.4rem;
+            border-radius: 1.2rem;
+            cursor: pointer;
+            transition: all .2s ease-in;
+
+            &-1 {
+                margin-bottom: 1.6rem;
+            }
+
+            & p {
+                margin-left: 1.6rem;
+                font-size: 1.8rem;
+                font-weight: 600;
+            }
+
+            & .right-arr-icon {
+                margin-left: auto;
+                width: 2rem;
+                height: 2rem;
+                color: #959DA6;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.active {
+    background-color: #F8F9FA;
+}
