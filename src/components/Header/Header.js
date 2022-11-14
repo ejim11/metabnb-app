@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import Button from "../UI/Button/Button";
 import Modal from "../UI/Modal/Modal";
 import WalletLinks from "../WalletLinks/WalletLinks";
+import { useState } from "react";
 
 const links = [
   {
@@ -25,6 +26,16 @@ const links = [
 ];
 
 const Header = () => {
+  const [modalVisible, setModalVisible] = useState(false);
+
+  const displayModalHandler = () => {
+    setModalVisible(true);
+  };
+
+  const hideModalHandler = (e) => {
+    setModalVisible(false);
+  };
+
   const navLinks = links.map((link, i) => (
     <li key={i}>
       <NavLink
@@ -47,11 +58,18 @@ const Header = () => {
         <nav>
           <ul>{navLinks}</ul>
         </nav>
-        <Button className={classes["connect-btn"]}>Connect wallet</Button>
+        <Button
+          className={classes["connect-btn"]}
+          onClick={displayModalHandler}
+        >
+          Connect wallet
+        </Button>
       </header>
-      <Modal>
-        <WalletLinks />
-      </Modal>
+      {modalVisible && (
+        <Modal onClick={hideModalHandler}>
+          <WalletLinks />
+        </Modal>
+      )}
     </>
   );
 };

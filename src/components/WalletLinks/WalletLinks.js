@@ -18,7 +18,7 @@ const WalletLinks = (props) => {
       key={i}
       className={`${classes["wallet-item"]} ${
         classes[`wallet-item-${i + 1}`]
-      } ${activeClass === i ? classes["active"] : classes["inactive"]}`}
+      } ${activeClass === i && classes["active"]}`}
       onClick={() => {
         setActiveClass(i);
       }}
