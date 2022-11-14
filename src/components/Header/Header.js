@@ -3,6 +3,7 @@ import logoColored from "../../assets/logo-coloured.svg";
 import { NavLink } from "react-router-dom";
 import Button from "../UI/Button/Button";
 import Modal from "../UI/Modal/Modal";
+import WalletLinks from "../WalletLinks/WalletLinks";
 
 const links = [
   {
@@ -48,7 +49,9 @@ const Header = () => {
         </nav>
         <Button className={classes["connect-btn"]}>Connect wallet</Button>
       </header>
-      <Modal></Modal>
+      <Modal>
+        <WalletLinks />
+      </Modal>
     </>
   );
 };
