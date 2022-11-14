@@ -2,6 +2,7 @@ import classes from "./Header.module.scss";
 import logoColored from "../../assets/logo-coloured.svg";
 import { NavLink } from "react-router-dom";
 import Button from "../UI/Button/Button";
+import Modal from "../UI/Modal/Modal";
 
 const links = [
   {
@@ -37,15 +38,18 @@ const Header = () => {
   ));
 
   return (
-    <header>
-      <div className={classes.logo}>
-        <img src={logoColored} alt="logo" />
-      </div>
-      <nav>
-        <ul>{navLinks}</ul>
-      </nav>
-      <Button className={classes["connect-btn"]}>Connect wallet</Button>
-    </header>
+    <>
+      <header>
+        <div className={classes.logo}>
+          <img src={logoColored} alt="logo" />
+        </div>
+        <nav>
+          <ul>{navLinks}</ul>
+        </nav>
+        <Button className={classes["connect-btn"]}>Connect wallet</Button>
+      </header>
+      <Modal></Modal>
+    </>
   );
 };
 
