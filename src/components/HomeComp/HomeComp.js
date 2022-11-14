@@ -10,7 +10,7 @@ const imgs = [mbTokenImg, metaMaskImg, openSeaImg];
 
 const HomeComp = () => {
   const images = imgs.map((img, i) => (
-    <div key={i}>
+    <div key={i} className={classes.img}>
       <img src={img} alt="sponsor-img" />
     </div>
   ));

@@ -7,7 +7,7 @@
     height: 100vh;
     background-color: #4040404D;
     top: 0;
-    right: 5rem;
+    right: 0;
     left: 0;
     z-index: 5;
     display: flex;
@@ -16,7 +16,13 @@
     transition: all .2s ease-in;
     cursor: pointer;
 
-    @include respond(laptop) {
+    @include respond(bigLaptop) {
+        width: 90%;
+    }
+
+    @include respond(medLaptop) {
         width: 100%;
     }
+
+
 }

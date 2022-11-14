@@ -1,15 +1,34 @@
 @import "../../../scss/base";
+@import "../../../scss/mixin";
 
 .first-section {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
+
+    @include respond(tablet) {
+        flex-direction: column;
+        align-items: center;
+    }
 
     &-1 {
         display: flex;
         flex-direction: column;
         justify-content: center;
         width: 50%;
-        // margin-right: 3rem;
+
+        @include respond(miniLaptop) {
+            width: 55%;
+        }
+
+        @include respond(bigTablet) {
+            width: 60%;
+        }
+
+        @include respond(tablet) {
+            width: 100%;
+            text-align: center;
+            align-items: center;
+        }
 
         & h1 {
             font-size: 5rem;
@@ -59,6 +78,17 @@
     &-2 {
         display: flex;
         width: 40%;
+        margin-left: auto;
+
+        @include respond(bigTablet) {
+            width: 35%;
+        }
+
+        @include respond(tablet) {
+            width: 60%;
+            margin-left: 0;
+            margin-top: 5rem;
+        }
 
         & .grp-img-1 {
             margin: 10rem .5rem 0 0;

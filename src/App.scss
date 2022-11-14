@@ -14,14 +14,22 @@
 html {
   box-sizing: border-box;
 
-  font-size: 87.5%; //1rem = 14px}
+  font-size: 87.5%; //1rem = 14px
 
-  @include respond(laptop) {
-    font-size: 75%; //1rem = 12px}
+  @include respond(bigLaptop) {
+    font-size: 81.25%; //1rem = 13px
+  }
+
+  @include respond(medLaptop) {
+    font-size: 68.75%; //1rem = 11px
   }
 
   @include respond(laptop) {
-    font-size: 62.5%; //1rem = 10px}
+    font-size: 56.25%; //1rem = 9px  
+  }
+
+  @include respond(miniLaptop) {
+    font-size: 50%; //1rem = 8px
   }
 }
 
@@ -42,8 +50,12 @@ input {
   width: 80%;
   margin: 0 auto;
 
+  @include respond(bigLaptop) {
+    width: 90%;
+  }
 
-  @include respond(laptop) {
+  @include respond(medLaptop) {
     width: 100%;
   }
+
 }

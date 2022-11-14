@@ -1,4 +1,10 @@
+@import "../../../scss/mixin";
+
 .sect {
     width: 100%;
     padding: 4rem 8rem 6rem;
+
+    @include respond(bigTablet) {
+        padding: 4rem 4rem 6rem;
+    }
 }

@@ -23,15 +23,15 @@
     }
 
     @if $breakpoint ==tablet {
-        @media (max-width: 50em) {
-            //800
+        @media (max-width: 53.75em) {
+            //860
             @content;
         }
     }
 
     @if $breakpoint ==bigTablet {
-        @media (max-width: 59.375em) {
-            //950
+        @media (max-width: 62.5em) {
+            //1000
             @content;
         }
     }
@@ -44,8 +44,8 @@
     }
 
     @if $breakpoint ==laptop {
-        @media (max-width: 90em) {
-            //1440
+        @media (max-width: 93.125em) {
+            //1490
             @content;
         }
     }
@@ -58,8 +58,8 @@
     }
 
     @if $breakpoint ==bigLaptop {
-        @media (max-width: 140.625em) {
-            //2250
+        @media (max-width: 146.875em) {
+            //2350
             @content;
         }
     }

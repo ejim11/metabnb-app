@@ -1,4 +1,5 @@
 @import "../../scss/base";
+@import "../../scss/mixin";
 
 footer {
     background-color: $color-black;
@@ -7,6 +8,10 @@ footer {
     width: 100%;
     flex-wrap: wrap;
     padding: 4.5rem 8rem 2.5rem;
+
+    @include respond(bigTablet) {
+        padding: 4.5rem 4rem 2.5rem;
+    }
 
     & .first-container {
         width: 30%;
