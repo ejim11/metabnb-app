@@ -5,6 +5,7 @@ const Modal = (props) => {
     <div
       className={`${classes["modal"]} ${props.className}`}
       onClick={props.onClick}
+      data-type="modal"
     >
       {props.children}
     </div>

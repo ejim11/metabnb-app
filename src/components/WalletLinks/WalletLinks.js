@@ -18,7 +18,7 @@ const WalletLinks = (props) => {
       key={i}
       className={`${classes["wallet-item"]} ${
         classes[`wallet-item-${i + 1}`]
-      } ${activeClass === i && classes["active"]}`}
+      } ${activeClass === i ? classes["active"] : ""}`}
       onClick={() => {
         setActiveClass(i);
       }}
@@ -38,6 +38,7 @@ const WalletLinks = (props) => {
         <AiOutlineClose
           className={classes["close-icon"]}
           onClick={props.onClose}
+          data-type="modal"
         />
       </div>
       <div className={classes["bx-2"]}>

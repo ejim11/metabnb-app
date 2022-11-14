@@ -33,7 +33,7 @@ const Header = () => {
   };
 
   const hideModalHandler = (e) => {
-    setModalVisible(false);
+    e.target.dataset.type === "modal" && setModalVisible(false);
   };
 
   const navLinks = links.map((link, i) => (
@@ -65,11 +65,12 @@ const Header = () => {
           Connect wallet
         </Button>
       </header>
-      {modalVisible && (
-        <Modal onClick={hideModalHandler}>
-          <WalletLinks />
-        </Modal>
-      )}
+      <Modal
+        onClick={hideModalHandler}
+        className={modalVisible ? classes["show"] : classes["hide"]}
+      >
+        <WalletLinks onClose={hideModalHandler} />
+      </Modal>
     </>
   );
 };
