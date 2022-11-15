@@ -66,6 +66,10 @@ footer {
         & ul {
             list-style-type: none;
 
+            @include respond(phone) {
+                text-align: center;
+            }
+
             & li {
                 margin: 1rem 0;
                 font-size: 1.6rem;
@@ -101,7 +105,7 @@ footer {
 
         @include respond(phone) {
             text-align: center;
-            margin-top: 5rem;
+            margin: 5rem 0;
         }
     }
 }
