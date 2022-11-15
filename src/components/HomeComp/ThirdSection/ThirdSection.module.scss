@@ -1,9 +1,16 @@
 @import "../../../scss/base";
+@import "../../../scss/mixin";
 
 .third-section {
     display: flex;
     background-color: $color-primary;
     justify-content: space-between;
+
+    @include respond(midTablet) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
     &-1 {
         width: 40%;
@@ -11,6 +18,11 @@
         flex-direction: column;
         justify-content: center;
         color: $color-white;
+
+        @include respond(midTablet) {
+            width: 100%;
+            align-items: center;
+        }
 
         & h3 {
             font-size: 4.8rem;
@@ -32,12 +44,20 @@
             background-color: $color-white;
             border: 1px solid $color-primary;
             border-radius: 8px;
+
+            @include respond(midTablet) {
+                align-self: center;
+            }
         }
     }
 
     &-2 {
         width: 50%;
         padding: 4rem 0;
+
+        @include respond(midTablet) {
+            width: 60%;
+        }
 
         & img {
             width: 100%;
