@@ -14,12 +14,16 @@ const filters = [
 
 const FilterComp = () => {
   const filterList = filters.map((filter, i) => (
-    <li className={classes.filter}>{filter}</li>
+    <li className={classes.filter}>
+      <p>{filter}</p>
+    </li>
   ));
 
   return (
     <div className={classes["container"]}>
-      <ul>{filterList}</ul>
+      <div className={classes["list-container"]}>
+        <ul>{filterList}</ul>
+      </div>
       <div className={classes["filter-box"]}>
         <p>Location</p>
         <div className={classes["filter-box-img"]}>

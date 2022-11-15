@@ -1,22 +1,75 @@
 @import "../../scss/base";
+@import "../../scss/mixin";
 
 .container {
     display: flex;
     align-items: center;
 
-    & ul {
-        display: flex;
-        list-style-type: none;
-        flex: 1;
-        justify-content: space-between;
-        align-items: center;
+    & .list-container {
+        position: relative;
+        width: 90%;
         margin-right: 3rem;
 
+        @include respond(phone) {
+            width: 100%;
+        }
 
-        & li {
-            font-size: 2rem;
-            font-weight: 400;
-            color: $color-text-black;
+        & ul {
+            display: flex;
+            list-style-type: none;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+
+            @include respond(midTablet) {
+                overflow: auto;
+                scroll-behavior: smooth;
+
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 3rem;
+                    height: 100%;
+                }
+
+                &::before {
+                    left: 0;
+                    background: linear-gradient(to left, transparent, $color-white );
+
+                    @include respond(phone) {
+                        // left: 1.5rem;
+                    }
+                }
+
+                &::after {
+                    right: 0;
+                    background: linear-gradient(to right, transparent, $color-white );
+
+                    @include respond(phone) {
+                        // right: 1.5rem;
+                    }
+                }
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+            }
+
+
+
+            & li {
+                font-size: 2rem;
+                font-weight: 400;
+                color: $color-text-black;
+
+                & p {
+                    @include respond(midTablet) {
+                        margin-right: 3rem;
+                        width: max-content;
+                    }
+                }
+            }
         }
     }
 
@@ -31,6 +84,20 @@
         border-radius: 8px;
         padding: 1.4rem;
         width: 15rem;
+
+        @include respond(tablet) {
+            width: min-content;
+        }
+
+        @include respond(phone) {
+            display: none;
+        }
+
+        & p {
+            @include respond(tablet) {
+                display: none;
+            }
+        }
 
         &-img {
             width: 2rem;
