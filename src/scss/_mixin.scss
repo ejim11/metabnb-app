@@ -16,8 +16,8 @@
 
 
     @if $breakpoint ==midTablet {
-        @media (max-width: 46.875em) {
-            //750
+        @media (max-width: 48.75em) {
+            //780
             @content;
         }
     }

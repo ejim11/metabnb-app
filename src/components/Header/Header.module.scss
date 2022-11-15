@@ -12,25 +12,68 @@ header {
         padding: 0 4rem;
     }
 
-    // & .logo {
-    //     @include respond(tablet) {
-    //         width: 50%;
-    //     }
-    // }
+    & .menu-icon {
+        height: 3rem;
+        width: 3rem;
+        color: $color-primary;
+        display: none;
+        margin-right: 1rem;
+        cursor: pointer;
+
+        @include respond(tablet) {
+            display: block;
+        }
+    }
+
+    & .logo {
+        & .logo-small {
+            display: none;
+
+            @include respond(tablet) {
+                display: block;
+            }
+        }
+
+        & .logo-big {
+            @include respond(tablet) {
+                display: none;
+            }
+        }
+
+    }
 
     & nav {
         margin: 0 auto;
 
         @include respond(tablet) {
-            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 8;
+            background-color: #4040404D;
+            transition: all .2s ease-in;
         }
 
         & ul {
             display: flex;
             list-style-type: none;
 
+            @include respond(tablet) {
+                width: 40%;
+                height: 100%;
+                flex-direction: column;
+                background-color: $color-white;
+                padding: 3rem;
+            }
+
             & li {
                 margin: 0 1.5rem;
+
+                @include respond(tablet) {
+                    margin: 0 0 1rem;
+                }
 
                 & a {
                     display: block;
@@ -56,6 +99,10 @@ header {
         font-size: 1.6rem;
         border-radius: 1rem;
 
+        @include respond(tablet) {
+            margin-left: auto;
+        }
+
         &:hover {
             color: $color-primary;
             background-color: $color-white;
@@ -80,4 +127,16 @@ header {
 .hide-modal {
     opacity: 0;
     visibility: hidden;
+}
+
+.invisible-menu {
+    @include respond(tablet) {
+        transform: translateX(-100%);
+    }
+}
+
+.visible-menu {
+    @include respond(tablet) {
+        transform: translateX(0);
+    }
 }
