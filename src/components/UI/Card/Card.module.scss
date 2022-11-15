@@ -7,4 +7,8 @@
     @include respond(bigTablet) {
         padding: 4rem 4rem 6rem;
     }
+
+    @include respond(phone) {
+        padding: 4rem 2.5rem 6rem;
+    }
 }
