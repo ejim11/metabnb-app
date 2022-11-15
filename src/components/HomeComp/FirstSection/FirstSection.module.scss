@@ -39,6 +39,12 @@
             & span {
                 color: $color-primary;
             }
+
+            @include respond(phone) {
+                & br {
+                    display: none;
+                }
+            }
         }
 
         & p {
