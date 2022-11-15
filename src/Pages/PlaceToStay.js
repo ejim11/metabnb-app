@@ -1,5 +1,11 @@
+import PlaceToStayComp from "../components/PlaceToStayComp/PlaceToStayComp";
+
 const PlaceToStay = () => {
-  return;
+  return (
+    <>
+      <PlaceToStayComp />
+    </>
+  );
 };
 
 export default PlaceToStay;
