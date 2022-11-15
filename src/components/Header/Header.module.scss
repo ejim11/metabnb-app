@@ -72,6 +72,11 @@ header {
                 padding: 3rem;
             }
 
+            @include respond(phone) {
+                width: 60%;
+            }
+
+
             & li {
                 margin: 0 1.5rem;
 
@@ -105,6 +110,10 @@ header {
 
         @include respond(tablet) {
             margin-left: auto;
+        }
+
+        @include respond(phone) {
+            padding: 1rem 2rem;
         }
 
         &:hover {
