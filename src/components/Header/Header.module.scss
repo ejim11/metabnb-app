@@ -68,7 +68,7 @@ header {
                 width: 40%;
                 height: 100%;
                 flex-direction: column;
-                background-color: $color-white;
+                background-color: $color-primary;
                 padding: 3rem;
             }
 
@@ -126,10 +126,18 @@ header {
 
 .active-link {
     color: $color-primary;
+
+    @include respond(tablet) {
+        color: #c9bbbb;
+    }
 }
 
 .inactive-link {
     color: $color-text-black;
+
+    @include respond(tablet) {
+        color: $color-white;
+    }
 }
 
 .show-modal {
