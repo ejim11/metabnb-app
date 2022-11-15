@@ -1,10 +1,15 @@
 @import "../../scss/base";
+@import "../../scss/mixin";
 
 .container {
     background-color: $color-white;
     width: 60rem;
     border-radius: 1rem;
     cursor: default;
+
+    @include respond(phone) {
+        width: 90%;
+    }
 
     & .bx-1 {
         display: flex;
