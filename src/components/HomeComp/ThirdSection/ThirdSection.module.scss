@@ -59,6 +59,10 @@
             width: 60%;
         }
 
+        @include respond(phone) {
+            width: 70%;
+        }
+
         & img {
             width: 100%;
         }
