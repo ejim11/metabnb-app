@@ -1,4 +1,5 @@
 @import "../../../scss/base";
+@import "../../../scss/mixin";
 
 .item-box {
     padding: 1.4rem;
@@ -34,6 +35,10 @@
         font-size: 1.2rem;
         font-weight: 400;
         color: $color-text-black;
+
+        @include respond(miniLaptop) {
+            font-size: 1.6rem;
+        }
 
         & .cost {
             font-weight: 700;
