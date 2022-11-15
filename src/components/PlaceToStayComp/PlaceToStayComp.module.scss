@@ -1,0 +1,13 @@
+@import "../../scss/mixin";
+
+.items-list-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2.4rem;
+    margin: 4rem 0 3rem;
+
+    @include respond(miniLaptop) {
+        grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+        grid-gap: 3rem;
+    }
+}
