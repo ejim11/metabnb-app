@@ -61,6 +61,10 @@
             border-radius: 8px;
             overflow: hidden;
 
+            @include respond(phone) {
+                width: 100%;
+
+            }
 
             & input {
                 flex: 1;
@@ -68,6 +72,10 @@
                 outline: none;
                 padding: 0 2rem;
                 font-weight: 400;
+
+                @include respond(phone) {
+                    width: 70%;
+                }
             }
 
             & .search-btn {
@@ -77,6 +85,11 @@
                 font-size: 1.6rem;
                 font-weight: 400;
                 color: $color-white;
+
+                @include respond(phone) {
+                    width: 30%;
+                    padding: 1.7rem 3rem;
+                }
             }
         }
     }
@@ -90,14 +103,24 @@
             width: 35%;
         }
 
+
+
         @include respond(tablet) {
             width: 60%;
             margin-left: 0;
             margin-top: 5rem;
         }
 
+        @include respond(phone) {
+            width: 70%;
+        }
+
         & .grp-img-1 {
             margin: 10rem .5rem 0 0;
+
+            @include respond(phone) {
+                margin: 5rem .5rem 0 0;
+            }
         }
 
         & .grp-img-1,
